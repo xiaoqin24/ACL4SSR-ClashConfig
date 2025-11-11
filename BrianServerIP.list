@@ -9,7 +9,7 @@ IP-CIDR,199.193.124.232/32,no-resolve
 #BwgDC6
 IP-CIDR,128.241.231.18/32,no-resolve
 #LightLayer
-IP-CIDR,38.49.55.84 /32,no-resolve
+IP-CIDR,38.49.55.84/32,no-resolve
 #ZgoUS
 IP-CIDR,195.245.229.46/32,no-resolve
 #ZgoJP
