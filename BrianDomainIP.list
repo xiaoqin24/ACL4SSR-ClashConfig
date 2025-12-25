@@ -3,8 +3,8 @@ DOMAIN-SUFFIX,wvbox.xyz
 DOMAIN-SUFFIX,668828.xyz
 DOMAIN-SUFFIX,193391.xyz
 #domain
-IP-CIDR,102.223.74.0/24,no-resolve
-#Justg
+IP-CIDR,69.63.219.90/24,no-resolve
+#DMIT
 IP-CIDR,199.193.124.0/24,no-resolve
 #BwgDC6
 IP-CIDR,128.241.231.0/24,no-resolve
@@ -13,3 +13,5 @@ IP-CIDR,38.49.55.0/24,no-resolve
 #ZgoUS
 IP-CIDR,195.245.229.0/24,no-resolve
 #ZgoJP
+IP-CIDR,160.191.52.2/24,no-resolve
+#TotHostVN
