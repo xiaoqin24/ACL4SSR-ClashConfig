@@ -2,3 +2,10 @@ rules:
   # 防止 YouTube 等使用 QUIC 导致速度不佳, 禁用 443 端口 UDP 流量（不包括国内）
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT
+
+rules:
+  # 1. 优先放行：如果是国内域名或国内 IP 的 UDP 443，直接放行（不拦截）
+  - AND,((DST-PORT,443),(NETWORK,UDP),(GEOSITE,cn)),DIRECT
+  - AND,((DST-PORT,443),(NETWORK,UDP),(GEOIP,CN)),DIRECT
+  # 2. 密集拦截：经过上面放行后，剩下的绝对全都是海外 UDP 443，直接全部无脑拦截
+  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT
