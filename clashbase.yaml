@@ -1,0 +1,89 @@
+mixed-port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+allow-lan: true
+bind-address: "*"
+mode: rule
+unified-delay: true
+tcp-concurrent: true
+udp: true
+global-client-fingerprint: random
+geox-url:
+  geosite: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
+  mmdb: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
+  geoip: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat
+  asn: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
+geo-auto-update: true
+geo-update-interval: 8
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  skip-domain:
+    - +.push.apple.com
+    - Mijia Cloud
+  sniff:
+    HTTP:
+      port:
+        - "80"
+        - 8080-8880
+      override-destination: true
+    TLS:
+      port:
+        - "443"
+        - "8443"
+      override-destination: true
+    QUIC:
+      port:
+        - "443"
+        - "8443"
+      override-destination: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+  tracing: false
+tun:
+  enable: false
+  device: mihomo
+  stack: mixed
+   inet4_route_address:
+    - 0.0.0.0/1
+    - 128.0.0.0/1
+  inet6_route_address:
+    - "::/1"
+    - "8000::/1"
+  macOS-auto-route: true
+  macOS-auto-detect-interface: true
+  dns-hijack:
+    - tcp://any:53
+    - udp://any:53
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  dns:
+  enable: true
+  prefer-h3: true
+  cache-algorithm: arc
+  listen: '[::]:1053'
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+   - "*.lan"
+   - "*.local"
+   - "*.globalfnf.com"
+   - "*.wvbox.xyz"
+   - "*.193391.xyz"
+   - "*.668828.xyz"
+   - "geosite:cn,geolocation-cn,onedrive,microsoft,apple,steam@cn,category-games@cn,private"
+   - "*.synology.com"
+   - "*.synology.me"
+   - "*.synology.net"
+  respect-rules: true
+  proxy-server-nameserver:
+    - https://doh.pub/dns-query
+    - https://223.5.5.5/dns-query
+  nameserver:
+    - system
+    - https://223.5.5.5/dns-query
+    - https://doh.pub/dns-query
