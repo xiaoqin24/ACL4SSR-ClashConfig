@@ -48,7 +48,7 @@ tun:
   enable: false
   device: mihomo
   stack: mixed
-   inet4_route_address:
+  inet4_route_address:
     - 0.0.0.0/1
     - 128.0.0.0/1
   inet6_route_address:
@@ -63,35 +63,36 @@ tun:
   auto-redirect: true
   auto-detect-interface: true
   dns:
-  enable: true
-  prefer-h3: true
-  cache-algorithm: arc
-  listen: '[::]:1053'
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-   - "*.lan"
-   - "*.localhost"
-   - "*.local"
-   - "*.globalfnf.com"
-   - "*.wvbox.xyz"
-   - "*.193391.xyz"
-   - "*.668828.xyz"
-   - "geosite:cn,geolocation-cn,onedrive,microsoft,apple,steam@cn,category-games@cn,private"
-   - "*.synology.com"
-   - "*.synology.me"
-   - "*.synology.net"
-  respect-rules: true
-  proxy-server-nameserver:
-    - https://doh.pub/dns-query
-    - https://223.5.5.5/dns-query
-  nameserver:
-    - system
-    - https://223.5.5.5/dns-query
-    - https://doh.pub/dns-query
-rules:
-  # 1. 优先放行：如果是国内域名或国内 IP 的 UDP 443，直接放行（不拦截）
-  - AND,((DST-PORT,443),(NETWORK,UDP),(GEOSITE,cn)),DIRECT
-  - AND,((DST-PORT,443),(NETWORK,UDP),(GEOIP,CN)),DIRECT
-  # 2. 密集拦截：经过上面放行后，剩下的绝对全都是海外 UDP 443，直接全部无脑拦截
-  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT
+    enable: true
+    prefer-h3: true
+    cache-algorithm: arc
+    listen: '[::]:1053'
+    enhanced-mode: fake-ip
+    fake-ip-filter-mode: blacklist
+    fake-ip-range: 198.18.0.1/16
+    fake-ip-filter:
+      - "*.lan"
+      - "*.localhost"
+      - "*.local"
+      - "*.globalfnf.com"
+      - "*.wvbox.xyz"
+      - "*.193391.xyz"
+      - "*.668828.xyz"
+      - "geosite:cn,geolocation-cn,onedrive,microsoft,apple,steam@cn,category-games@cn,private"
+      - "*.synology.com"
+      - "*.synology.me"
+      - "*.synology.net"
+    respect-rules: true
+    proxy-server-nameserver:
+      - https://doh.pub/dns-query
+      - https://223.5.5.5/dns-query
+    nameserver:
+      - system
+      - https://223.5.5.5/dns-query
+      - https://doh.pub/dns-query
+  rules:
+    # 1. 优先放行：如果是国内域名或国内 IP 的 UDP 443，直接放行（不拦截）
+    - AND,((DST-PORT,443),(NETWORK,UDP),(GEOSITE,cn)),DIRECT
+    - AND,((DST-PORT,443),(NETWORK,UDP),(GEOIP,CN)),DIRECT
+    # 2. 密集拦截：经过上面放行后，剩下的绝对全都是海外 UDP 443，直接全部无脑拦截
+    - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT
