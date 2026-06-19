@@ -92,9 +92,6 @@
     nameserver:
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
-    direct-nameserver:
-      - https://dns.alidns.com/dns-query
-      - https://doh.pub/dns-query
   rules:
     # 1. 优先放行：如果是国内域名或国内 IP 的 UDP 443，直接放行（不拦截）
     - AND,((DST-PORT,443),(NETWORK,UDP),(GEOSITE,cn)),DIRECT
