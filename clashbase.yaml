@@ -24,6 +24,8 @@
     skip-domain:
       - +.push.apple.com
       - Mijia Cloud
+      - dlg.io.mi.com
+      - +.apple.com
     sniff:
       HTTP:
         port:
@@ -34,12 +36,10 @@
         port:
           - "443"
           - "8443"
-        override-destination: true
       QUIC:
         port:
           - "443"
           - "8443"
-        override-destination: true
   profile:
     store-selected: true
     store-fake-ip: true
