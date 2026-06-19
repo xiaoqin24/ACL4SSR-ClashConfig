@@ -98,7 +98,7 @@
       "+.idqqimg.com": "119.29.29.29"
       "+.cdn-go.cn": "119.29.29.29"
       "+.smtcdns.???": "119.29.29.29"
-      "*.url.cn": "119.29.29.29"
+      "+.url.cn": "119.29.29.29"
       "+.alibaba*": "223.5.5.5"
       "+.alibaba*.*": "223.5.5.5"
       "+.1688.com": "223.5.5.5"
@@ -117,7 +117,7 @@
       "+.aaplimg.*": "223.5.5.5"
       "+.icloud.*": "223.5.5.5"
       "+.apple.*": "223.5.5.5"
-      "*-apple.*": "223.5.5.5"
+      "+-apple.*": "223.5.5.5"
       "+.apple-*": "223.5.5.5"
       "+.apple-*.*": "223.5.5.5"
       "+.apple": "223.5.5.5"
@@ -148,7 +148,7 @@
       "+.yunpan.cn": "101.226.4.6"
       "+.yunpan.com.cn": "101.226.4.6"
       "+.yunpan.com": "101.226.4.6"
-      "*.urlqh.cn": "101.226.4.6"
+      "+.urlqh.cn": "101.226.4.6"
       "+.bilibili.com": "119.29.29.29"
       "+.biliapi.???": "119.29.29.29"
       "+.bilicdn?.com": "119.29.29.29"
@@ -160,7 +160,7 @@
       "+.jdcloud.com": "223.5.5.5"
       "+.jcloudstatic.???": "223.5.5.5"
       "+.jdgslb.com": "223.5.5.5"
-      "*.3.cn": "223.5.5.5"
+      "+.3.cn": "223.5.5.5"
       geosite:cn,private,apple,onedrive,microsoft@cn,apple,apple-cn,category-games@cn:
         - https://dns.alidns.com/dns-query
         - https://doh.pub/dns-query
