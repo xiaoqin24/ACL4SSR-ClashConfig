@@ -160,7 +160,7 @@
       "+.jdcloud.com": "223.5.5.5"
       "+.jcloudstatic.???": "223.5.5.5"
       "+.jdgslb.com": "223.5.5.5"
-      "3.cn": "223.5.5.5"
+      "*.3.cn": "223.5.5.5"
       geosite:cn,private,apple,onedrive,microsoft@cn,apple,apple-cn,category-games@cn:
         - https://dns.alidns.com/dns-query
         - https://doh.pub/dns-query
