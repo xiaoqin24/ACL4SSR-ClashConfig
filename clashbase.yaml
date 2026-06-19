@@ -72,10 +72,8 @@
       - 223.6.6.6
       - 119.28.28.28
     proxy-server-nameserver:
-      - https://dns.google.com/dns-query
-      - h3://odoh.cloudflare-dns.com/dns-query
-      - h3://anycast.dns.nextdns.io/dns-query
-      - h3://dns.nextdns.io/dns-query
+      - https://dns.cloudflare.com/dns-query
+      - https://dns.google/dns-query
     nameserver:
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
@@ -167,7 +165,6 @@
       geosite:geolocation-!cn:
         - https://dns.cloudflare.com/dns-query
         - https://dns.google/dns-query
-        - h3://odoh.cloudflare-dns.com/dns-query
   rules:
     # 1. 优先放行：如果是国内域名或国内 IP 的 UDP 443，直接放行（不拦截）
     - AND,((DST-PORT,443),(NETWORK,UDP),(GEOSITE,cn)),DIRECT
