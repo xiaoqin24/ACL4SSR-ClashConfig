@@ -36,10 +36,12 @@
         port:
           - "443"
           - "8443"
+        override-destination: true
       QUIC:
         port:
           - "443"
           - "8443"
+        override-destination: true
   profile:
     store-selected: true
     store-fake-ip: true
