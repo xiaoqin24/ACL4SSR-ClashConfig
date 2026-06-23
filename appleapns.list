@@ -1,4 +1,4 @@
-DOMAIN,identity.apple.com
+#DOMAIN,identity.apple.com
 DOMAIN-SUFFIX,akadns.net
 DOMAIN-SUFFIX,push.apple.com
 DOMAIN-KEYWORD,apple.com.edgekey.net
