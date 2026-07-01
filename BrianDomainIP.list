@@ -1,4 +1,6 @@
-# 内容：我的VPS服务器IP
+# Domain
+DOMAIN-SUFFIX,din-top.com
+DOMAIN-SUFFIX,globalfnf.com
 DOMAIN-SUFFIX,wvbox.xyz
 DOMAIN-SUFFIX,668828.xyz
 DOMAIN-SUFFIX,193391.xyz
@@ -6,18 +8,3 @@ DOMAIN-SUFFIX,hp.com
 DOMAIN-SUFFIX,hp.com.cn
 DOMAIN-SUFFIX,hp.cn
 DOMAIN-SUFFIX,671001.xyz
-#domain
-IP-CIDR,69.63.219.90/24,no-resolve
-#DMIT
-IP-CIDR,195.172.138.0/24,no-resolve
-#SkylineSG
-IP-CIDR,195.245.229.0/24,no-resolve
-#ZgoJP
-IP-CIDR,103.15.90.0/24,no-resolve
-#TotHostVN
-IP-CIDR,80.251.221.0/24,no-resolve
-#AlvinBWG
-IP-CIDR,154.17.2.0/24,no-resolve
-#AlvinDMIT
-IP-CIDR,104.233.229.0/24,no-resolve
-#TonyTropdCloud
