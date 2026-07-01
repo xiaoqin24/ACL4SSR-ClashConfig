@@ -58,6 +58,7 @@
       - "*.lan"
       - "*.localhost"
       - "*.local"
+      - "*.din-top.com"
       - "*.globalfnf.com"
       - "*.wvbox.xyz"
       - "*.193391.xyz"
